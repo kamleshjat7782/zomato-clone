@@ -35,7 +35,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/' element={<Navigate to="/delivery" />} />
+        <Route path='/zomato-clone' element={<Navigate to="/delivery" />} />
         <Route path='/:type' element={<Home />} />
         <Route path='/google/:token' element={<GoogleAuth />} />
         <Route path="/restaurant/:id" element={<RestaurantLayout><Restaurant /></RestaurantLayout>}>

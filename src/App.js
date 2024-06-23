@@ -19,6 +19,7 @@ import { useDispatch } from "react-redux";
 import { getMySelf } from "./Redux/Reducers/user/user.action";
 import { useEffect } from 'react';
 import { getCart } from './Redux/Reducers/cart/cart.action';
+import Zomato from './Pages/Zomato';
 
 function App() {
   const dispatch = useDispatch();
@@ -35,7 +36,8 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path='/zomato-clone' element={<Navigate to="/delivery" />} />
+        <Route path='/' element={<Zomato />} />
+        <Route path='/zomato' element={<Navigate to="/delivery" />} />
         <Route path='/:type' element={<Home />} />
         <Route path='/google/:token' element={<GoogleAuth />} />
         <Route path="/restaurant/:id" element={<RestaurantLayout><Restaurant /></RestaurantLayout>}>
